@@ -1,6 +1,7 @@
 package de.luc1412.tp.bungee;
 
 import de.luc1412.tp.bungee.commands.SetHomeCommand;
+import de.luc1412.tp.bungee.utils.ConfigManager;
 import net.md_5.bungee.BungeeCord;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.api.plugin.PluginManager;
@@ -9,13 +10,14 @@ public class BungeeTeleportSystem extends Plugin {
 
 	private static BungeeTeleportSystem instance;
 
+	private static ConfigManager configManager;
+
 	public static BungeeTeleportSystem getInstance() {
 		return instance;
 	}
 
-	@Override
-	public void onEnable() {
-		instance = this;
+	public static ConfigManager getConfigManager() {
+		return configManager;
 	}
 
 	private void init() {
@@ -30,5 +32,14 @@ public class BungeeTeleportSystem extends Plugin {
 	@Override
 	public void onDisable() {
 
+	}
+
+	@Override
+	public void onEnable() {
+		instance = this;
+
+		configManager = new ConfigManager();
+
+		init();
 	}
 }

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Teleport-System:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Teleport_System_jar</output-path>
+    <root id="archive" name="Teleport-System.jar">
+      <element id="module-output" name="Teleport-System" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/CreepPlaysDE/Asyncable/asyncable-sample/1.0/asyncable-sample-1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/CreepPlaysDE/Asyncable/asyncable-mysql/1.0/asyncable-mysql-1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../BungeeCord/BungeeCord_Lib.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/CreepPlaysDE/Asyncable/asyncable-api/1.0/asyncable-api-1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../spigot-1.12.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/CreepPlaysDE/Asyncable/1.0/Asyncable-1.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
