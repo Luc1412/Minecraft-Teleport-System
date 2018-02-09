@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class Utils {
 
-	public static Location decode(String string) {
+	public static Location decodeLocation(String string) {
 		String[] splited = string.split(":");
 
 		World world = Bukkit.getWorld(splited[0]);
@@ -20,6 +20,17 @@ public class Utils {
 		float pitch = Float.parseFloat(splited[5]);
 
 		return new Location(world, x, y, z, yaw, pitch);
+	}
+
+	public static String encodeLocation(Location loc) {
+		String wordName = loc.getWorld().getName();
+		int x = loc.getBlockX();
+		int y = loc.getBlockY();
+		int z = loc.getBlockZ();
+		float yaw = loc.getYaw();
+		float pitch = loc.getPitch();
+
+		return wordName + ":" + x + ":" + y + ":" + z + ":" + yaw + ":" + pitch;
 	}
 
 	public static String toJson(Map<String, String> values) {

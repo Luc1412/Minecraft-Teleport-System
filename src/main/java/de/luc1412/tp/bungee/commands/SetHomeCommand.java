@@ -27,7 +27,7 @@ public class SetHomeCommand extends Command {
 						int maxHomes = Utils.getMaxHomes(player);
 						if (home >= 1) {
 							if (home <= maxHomes) {
-
+								BungeeTeleportSystem.getBungeeMessenger().sendLocationRequest(player, home);
 							} else
 								player.sendMessage(new TextComponent(BungeeTeleportSystem.getConfigManager().getVarMessage("Home.ToHigh").replace("%maxHomes%", String.valueOf(maxHomes))));
 						} else player.sendMessage(BungeeTeleportSystem.getConfigManager().getMessage("Home.ToLow"));

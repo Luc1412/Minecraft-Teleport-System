@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class BukkitTeleportSystem extends JavaPlugin {
 
-	private BukkitTeleportSystem instance;
+	private static BukkitTeleportSystem instance;
 
 
 	@Override
@@ -24,7 +24,7 @@ public class BukkitTeleportSystem extends JavaPlugin {
 
 	}
 
-	public BukkitTeleportSystem getInstance() {
+	public static BukkitTeleportSystem getInstance() {
 		return instance;
 	}
 

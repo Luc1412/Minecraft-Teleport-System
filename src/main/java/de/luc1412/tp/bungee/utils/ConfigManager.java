@@ -37,6 +37,12 @@ public class ConfigManager {
 
 
 			cfg.set("Messages.SetHome.Help", "&5Bitte nutze /sethome <1,2,3...>");
+
+			cfg.set("Database.Host", "localhost");
+			cfg.set("Database.Port", 22);
+			cfg.set("Database.Database", "Database");
+			cfg.set("Database.User", "User");
+			cfg.set("Database.Passwd", "Passwd");
 		}
 	}
 
@@ -48,6 +54,14 @@ public class ConfigManager {
 	public String getVarMessage(String path) {
 		String value = cfg.getString("Messages." + path);
 		return (value != null) ? value : "§4Message not found in Messages." + path;
+	}
+
+	public String getString(String path) {
+		return cfg.getString(path);
+	}
+
+	public int getInt(String path) {
+		return cfg.getInt(path);
 	}
 
 }
